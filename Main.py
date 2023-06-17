@@ -4,9 +4,12 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-data = pd.read_csv('acnh_villagers.csv')
+with st.sidebar:
+    st.image('https://dodo.ac/np/images/5/52/NH_Logo_English.png', use_column_width='auto')
+    st.audio('https://dodo.ac/np/images/4/48/NH_Main_Theme.flac', format='audio/flac', start_time=0)
+    st.write('---')
 
-st.image('https://dodo.ac/np/images/5/52/NH_Logo_English.png', width=200)
+data = pd.read_csv('acnh_villagers.csv')
 st.title('Villagers Recommendation')
 random_rows = data.sample(n=1)
 st.caption(random_rows['nh_details.quote'].values[0] + ' - ' + random_rows['Name'].values[0])
