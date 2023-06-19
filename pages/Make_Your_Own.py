@@ -12,6 +12,10 @@ st.title('Make-Your-Own-Villagers Recommendation')
 random_rows = data2.sample(n=1)
 st.caption(random_rows['nh_details.quote'].values[0] + ' - ' + random_rows['Name'].values[0])
 
+with st.sidebar:
+    st.image('https://dodo.ac/np/images/5/52/NH_Logo_English.png', use_column_width='auto')
+    st.audio('https://dodo.ac/np/images/4/48/NH_Main_Theme.flac', format='audio/flac', start_time=0)
+    st.write('---')
 
 st.write('---')
 st.write('Select the filters that you wish to apply:')
